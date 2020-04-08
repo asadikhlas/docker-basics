@@ -1,0 +1,37 @@
+-this command will override the echo command and print hi there or any other message
+-Busybox is docker image it has all the containers folder which we will see with ls command
+docker run busybox echo hi there
+docker run busybox ls
+
+
+-this command list all running containers and images
+docker ps
+
+-this command will list out all the containers that we have ever created
+docker ps -all
+
+-this command execute two commands for create container and start it
+docker run <image-name> = docker create <image-name> + docker start -a <container-ID>
+
+
+-this command restart stopped container again
+docker start -a <container-ID>
+
+-this command delete all the stopped containers
+docker system prune
+
+-this command get logs from a container we can use this commands for start the container without -a flag
+docker logs <container-ID>
+
+-this commands stop the containers kill stop the container immeidiately stop will take upto 10 seconds after that it will execute the kill command for stop the container
+docker stop <container-ID>
+docker kill <container-ID>
+
+-this command start the terminal in container
+docker run -it busybox sh
+
+-this commad is use for tagging the image
+docker build -t asadikhlas/redis:latest .
+
+
+
